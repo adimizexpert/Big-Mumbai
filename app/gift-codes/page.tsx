@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { motion } from 'framer-motion'
@@ -11,7 +13,8 @@ import {
   Star,
   Zap,
   DollarSign,
-  Calendar
+  Calendar,
+  Shield
 } from 'lucide-react'
 
 export default function GiftCodes() {
@@ -110,8 +113,8 @@ export default function GiftCodes() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-900 to-pink-800 text-white section-padding">
-        <div className="container-custom text-center">
+      <section className="bg-gradient-to-r from-purple-900 to-pink-800 text-white py-20 px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,14 +124,14 @@ export default function GiftCodes() {
             <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <Gift className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-shadow">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Gift Codes & Bonuses
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-100">
               Unlock exclusive rewards and boost your gaming experience
             </p>
             
-            <Link href="/register" className="btn-primary text-xl px-12 py-5 bg-red-600 hover:bg-red-700 inline-flex items-center">
+            <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-12 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 inline-flex items-center">
               <Trophy className="w-6 h-6 mr-2" />
               Register & Get ₹10 Bonus
               <ArrowRight className="w-6 h-6 ml-2" />
@@ -138,9 +141,9 @@ export default function GiftCodes() {
       </section>
 
       {/* Welcome Bonus Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="bg-gradient-to-r from-primary-600 to-accent-500 text-white rounded-3xl p-12 text-center">
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-red-600 to-purple-600 text-white rounded-3xl p-12 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +157,7 @@ export default function GiftCodes() {
                 Every new player gets ₹10 bonus instantly upon registration!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="/register" className="bg-white text-primary-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
+                <Link href="/register" className="bg-white text-red-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
                   <Trophy className="w-6 h-6 mr-2" />
                   Register Now & Claim
                   <ArrowRight className="w-6 h-6 ml-2" />
@@ -171,8 +174,8 @@ export default function GiftCodes() {
       </section>
 
       {/* Gift Codes Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +199,7 @@ export default function GiftCodes() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-2xl shadow-lg text-center card-hover"
+                className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Gift className="w-8 h-8 text-white" />
@@ -226,7 +229,7 @@ export default function GiftCodes() {
 
           {/* CTA after gift codes */}
           <div className="text-center">
-            <Link href="/register" className="btn-primary text-xl px-12 py-5 inline-flex items-center">
+            <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-12 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 inline-flex items-center">
               <Gift className="w-6 h-6 mr-2" />
               Register & Use All Codes
               <ArrowRight className="w-6 h-6 ml-2" />
@@ -236,8 +239,8 @@ export default function GiftCodes() {
       </section>
 
       {/* Referral Program Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -278,7 +281,7 @@ export default function GiftCodes() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{tier.tier}</h3>
                 <p className="text-gray-600 text-sm mb-2">{tier.requirement}</p>
-                <p className="text-primary-600 font-semibold mb-2">{tier.bonus}</p>
+                <p className="text-red-600 font-semibold mb-2">{tier.bonus}</p>
                 <p className="text-lg font-bold text-gray-900">{tier.total}</p>
               </motion.div>
             ))}
@@ -327,7 +330,7 @@ export default function GiftCodes() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-white">{step.step}</span>
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h4>
@@ -339,7 +342,7 @@ export default function GiftCodes() {
 
           {/* CTA after referral */}
           <div className="text-center">
-            <Link href="/register" className="btn-primary text-xl px-12 py-5 inline-flex items-center">
+            <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-12 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 inline-flex items-center">
               <Users className="w-6 h-6 mr-2" />
               Start Referring & Earning
               <ArrowRight className="w-6 h-6 ml-2" />
@@ -349,8 +352,8 @@ export default function GiftCodes() {
       </section>
 
       {/* Features Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -374,10 +377,10 @@ export default function GiftCodes() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-2xl bg-white shadow-lg card-hover"
+                className="text-center p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-primary-600" />
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -387,14 +390,14 @@ export default function GiftCodes() {
 
           {/* Final CTA */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-primary-600 to-accent-500 text-white p-12 rounded-3xl max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-red-600 to-purple-600 text-white p-12 rounded-3xl max-w-4xl mx-auto">
               <h3 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Claim Your Bonuses?
               </h3>
               <p className="text-xl mb-8 text-gray-100">
                 Register now and get ₹10 welcome bonus + start earning from referrals!
               </p>
-              <Link href="/register" className="bg-white text-primary-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
+              <Link href="/register" className="bg-white text-red-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
                 <Trophy className="w-6 h-6 mr-2" />
                 Register & Get ₹10 + Referral Bonuses
                 <ArrowRight className="w-6 h-6 ml-2" />
