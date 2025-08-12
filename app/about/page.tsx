@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { motion } from 'framer-motion'
@@ -87,8 +89,8 @@ export default function About() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white section-padding">
-        <div className="container-custom text-center">
+      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -112,8 +114,8 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -134,7 +136,7 @@ export default function About() {
                 a seamless experience that keeps players engaged and rewarded.
               </p>
               
-              <Link href="/register" className="btn-primary text-lg px-8 py-4 inline-flex items-center">
+              <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 inline-flex items-center">
                 Join Our Community
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -145,10 +147,10 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-primary-100 to-accent-100 p-8 rounded-3xl"
+              className="bg-gradient-to-br from-red-100 to-purple-100 p-8 rounded-3xl"
             >
               <div className="text-center">
-                <Trophy className="w-24 h-24 text-primary-600 mx-auto mb-6" />
+                <Trophy className="w-24 h-24 text-red-600 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Why Choose Big Mumbai?
                 </h3>
@@ -207,7 +209,7 @@ export default function About() {
 
           {/* CTA after sections */}
           <div className="text-center mb-20">
-            <Link href="/register" className="btn-primary text-xl px-12 py-5 inline-flex items-center">
+            <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-12 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 inline-flex items-center">
               <Trophy className="w-6 h-6 mr-2" />
               Register & Start Winning Today
               <ArrowRight className="w-6 h-6 ml-2" />
@@ -241,8 +243,8 @@ export default function About() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="w-8 h-8 text-primary-600" />
+                                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-red-600" />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
@@ -276,10 +278,10 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-2xl shadow-lg text-center card-hover"
+                  className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="w-8 h-8 text-primary-600" />
+                                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-red-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -290,7 +292,7 @@ export default function About() {
 
           {/* Final CTA */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-primary-600 to-accent-500 text-white p-12 rounded-3xl max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-red-600 to-purple-600 text-white p-12 rounded-3xl max-w-4xl mx-auto">
               <h3 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Join the Big Mumbai Family?
               </h3>
@@ -298,7 +300,7 @@ export default function About() {
                 Experience gaming like never before with connection, competition, and real cash rewards!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/register" className="bg-white text-primary-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
+                <Link href="/register" className="bg-white text-red-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
                   <Trophy className="w-6 h-6 mr-2" />
                   Register Now & Get ₹10 Bonus
                   <ArrowRight className="w-6 h-6 ml-2" />
