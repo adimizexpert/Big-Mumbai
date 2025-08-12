@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { motion } from 'framer-motion'
@@ -129,7 +131,7 @@ export default function FAQ() {
               Everything you need to know about Big Mumbai Game
             </p>
             
-            <Link href="/register" className="btn-primary text-xl px-12 py-5 bg-red-600 hover:bg-red-700 inline-flex items-center">
+            <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-12 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 inline-flex items-center">
               <Trophy className="w-6 h-6 mr-2" />
               Register Now & Get ₹10 Bonus
               <ArrowRight className="w-6 h-6 ml-2" />
@@ -176,7 +178,7 @@ export default function FAQ() {
                       {faq.question}
                     </h3>
                     {openItems.includes(index) ? (
-                      <ChevronUp className="w-6 h-6 text-primary-600 flex-shrink-0" />
+                      <ChevronUp className="w-6 h-6 text-red-600 flex-shrink-0" />
                     ) : (
                       <ChevronDown className="w-6 h-6 text-gray-400 flex-shrink-0" />
                     )}
@@ -201,7 +203,7 @@ export default function FAQ() {
 
             {/* CTA after FAQ */}
             <div className="text-center mb-16">
-              <Link href="/register" className="btn-primary text-xl px-12 py-5 inline-flex items-center">
+              <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-12 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 inline-flex items-center">
                 <Trophy className="w-6 h-6 mr-2" />
                 Ready to Start Playing?
                 <ArrowRight className="w-6 h-6 ml-2" />
@@ -230,7 +232,7 @@ export default function FAQ() {
                   href="/how-to-play"
                   className="bg-white p-6 rounded-2xl text-center hover:shadow-lg transition-shadow duration-300 card-hover"
                 >
-                  <Gamepad2 className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+                  <Gamepad2 className="w-12 h-12 text-red-600 mx-auto mb-4" />
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">How to Play</h4>
                   <p className="text-gray-600 text-sm">Learn the basics and start gaming</p>
                 </Link>
@@ -239,7 +241,7 @@ export default function FAQ() {
                   href="/gift-codes"
                   className="bg-white p-6 rounded-2xl text-center hover:shadow-lg transition-shadow duration-300 card-hover"
                 >
-                  <Gift className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+                  <Gift className="w-12 h-12 text-red-600 mx-auto mb-4" />
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">Gift Codes</h4>
                   <p className="text-gray-600 text-sm">Get bonuses and special offers</p>
                 </Link>
@@ -248,7 +250,7 @@ export default function FAQ() {
                   href="/contact"
                   className="bg-white p-6 rounded-2xl text-center hover:shadow-lg transition-shadow duration-300 card-hover"
                 >
-                  <Users className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+                  <Users className="w-12 h-12 text-red-600 mx-auto mb-4" />
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">Contact Support</h4>
                   <p className="text-gray-600 text-sm">Get help from our team</p>
                 </Link>
@@ -264,7 +266,7 @@ export default function FAQ() {
                 <p className="text-lg mb-6 text-gray-100">
                   Get your ₹10 welcome bonus and start playing today!
                 </p>
-                <Link href="/register" className="bg-white text-primary-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
+                <Link href="/register" className="bg-white text-red-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
                   <Trophy className="w-6 h-6 mr-2" />
                   Register Now & Win
                   <ArrowRight className="w-6 h-6 ml-2" />

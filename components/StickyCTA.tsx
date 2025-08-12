@@ -12,9 +12,9 @@ const StickyCTA = () => {
       transition={{ duration: 0.5, delay: 1 }}
       className="sticky-cta"
     >
-      <div className="bg-white rounded-2xl shadow-2xl p-4 border-2 border-primary-500 max-w-xs">
+      <div className="bg-white rounded-2xl shadow-2xl p-4 border-2 border-red-500 max-w-xs">
         {/* Urgency Banner */}
-        <div className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-center py-2 px-3 rounded-lg mb-3">
+        <div className="bg-gradient-to-r from-red-500 to-purple-500 text-white text-center py-2 px-3 rounded-lg mb-3">
           <div className="flex items-center justify-center space-x-2 text-sm font-bold">
             <Clock className="w-4 h-4" />
             <span>Limited Time Offer!</span>
@@ -24,7 +24,7 @@ const StickyCTA = () => {
         {/* Main CTA */}
         <Link
           href="/register"
-          className="btn-primary w-full text-center mb-3 block"
+          className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300 w-full text-center mb-3 block"
         >
           Register Now & Get ₹10 Bonus!
         </Link>

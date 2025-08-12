@@ -1,139 +1,61 @@
 import Link from 'next/link'
-import { Trophy, Gift, Shield, Users, Mail, Phone } from 'lucide-react'
+import { Trophy, Gift, Users, Shield, Heart } from 'lucide-react'
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
-
-  const footerLinks = {
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'How to Play', href: '/how-to-play' },
-      { name: 'Gift Codes', href: '/gift-codes' },
-      { name: 'Blog', href: '/blog' },
-    ],
-    support: [
-      { name: 'FAQ', href: '/faq' },
-      { name: 'Contact Us', href: '/contact' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Privacy Policy', href: '/privacy' },
-    ],
-    games: [
-      { name: 'Lottery', href: '/games/lottery' },
-      { name: 'Casino', href: '/games/casino' },
-      { name: 'Fishing', href: '/games/fishing' },
-      { name: 'Aviator', href: '/games/aviator' },
-      { name: 'Card Games', href: '/games/cards' },
-    ],
-  }
-
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container-custom section-padding">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Trophy className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold">Big Mumbai</span>
             </div>
-            <p className="text-gray-300 text-sm">
-              A unique gaming experience with connection, competition, and rewards. 
-              Play anytime, anywhere and win real cash prizes.
+            <p className="text-gray-300 mb-4 max-w-md">
+              Experience the thrill of gaming with Big Mumbai. Play, compete, and win real cash rewards with our unique collection of games.
             </p>
             <div className="flex space-x-4">
-              <Link href="/register" className="btn-primary text-sm py-2 px-4">
+              <Link href="/register" className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300">
                 Register Now
               </Link>
             </div>
           </div>
 
-          {/* Company Links */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/gift-codes" className="text-gray-300 hover:text-white transition-colors">Gift Codes</Link></li>
+              <li><Link href="/how-to-play" className="text-gray-300 hover:text-white transition-colors">How to Play</Link></li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
 
-          {/* Support Links */}
+          {/* Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link href="/faq" className="text-gray-300 hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/terms" className="text-gray-300 hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
             </ul>
-          </div>
-
-          {/* Games & Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Games</h3>
-            <ul className="space-y-2 mb-6">
-              {footerLinks.games.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Mail className="w-4 h-4" />
-                <span>support@bigmumbaimumbai.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Phone className="w-4 h-4" />
-                <span>+91 98765 43210</span>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Big Mumbai Game. All rights reserved.
-            </div>
-            
-            <div className="flex items-center space-x-6 text-sm">
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Users className="w-4 h-4" />
-                <span>10K+ Players</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Gift className="w-4 h-4" />
-                <span>₹50M+ Paid</span>
-              </div>
-            </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2024 Big Mumbai Game. All rights reserved.
+          </div>
+          <div className="flex items-center space-x-2 text-gray-400 text-sm">
+            <Shield className="w-4 h-4" />
+            <span>Secure & Licensed Gaming</span>
+            <Heart className="w-4 h-4 text-red-500" />
           </div>
         </div>
       </div>
