@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { motion } from 'framer-motion'
