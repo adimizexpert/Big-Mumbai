@@ -12,7 +12,7 @@ import {
   Zap,
   DollarSign,
   Calendar,
-  Shield
+  Shield // Added Shield import for security icon
 } from 'lucide-react'
 
 export default function GiftCodes() {
