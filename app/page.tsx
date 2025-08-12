@@ -26,13 +26,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
               href="/register" 
-              className="btn-primary"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300"
             >
               🏆 Register Now & Win
             </Link>
             <Link 
               href="/login" 
-              className="btn-secondary"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-base transition-colors duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-green-300"
             >
               👥 Login
             </Link>
@@ -84,7 +84,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link 
               href="/register" 
-              className="btn-primary"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300"
             >
               Start Playing Now
             </Link>
@@ -98,14 +98,14 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Winning?
           </h2>
-          <p className="text-xl mb-8 text-gray-100">
-            Join Big Mumbai Game today and get your ₹10 welcome bonus instantly!
+          <p className="text-xl mb-8 text-gray-200">
+            Join thousands of players already enjoying Big Mumbai Game
           </p>
           <Link 
             href="/register" 
-            className="btn-primary"
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-12 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300"
           >
-            🏆 Register Now & Win
+            🚀 Register Now & Get ₹10 Bonus
           </Link>
         </div>
       </section>
